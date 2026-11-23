@@ -126,15 +126,38 @@ h3 {
   gap: 1.25rem;
   padding: 1.5rem 0;
 }
-
-.research-description {
-  width: 100%;
+/* Research section typography */
+.research-description h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.8rem;
 }
 
-.research-visual {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
+.research-description p {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  max-width: 800px;
+}
+
+/* Larger, centered visualizations */
+@media (min-width: 761px) {
+  .research-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .research-visual {
+    width: 95%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+}
+
+/* Animation caption */
+.research-visual figcaption {
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .ascii-title {
