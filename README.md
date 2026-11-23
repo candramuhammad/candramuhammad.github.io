@@ -1,39 +1,36 @@
-# Minimal academic website for GitHub Pages
+# Candra Muhammad — Classic Dark Academic Website
 
-A lightweight, responsive, free-to-host academic and educational website. No account, build tools, dependencies, framework, or hosting payment required beyond your GitHub account.
+A plain-HTML GitHub Pages website with an early-2000s academic style and dark background. No build tools or paid hosting required.
 
-## Preview locally
+## Publish
 
-Open `index.html` in a browser. You can also use `python3 -m http.server 8000` in this folder and visit http://localhost:8000.
+1. Make a backup of the current GitHub repository files before replacing them.
+2. Upload the CONTENTS of this folder to the root of `candramuhammad.github.io` (not a nested `candra-classic-dark` folder).
+3. Replace the old `index.html` and `assets/style.css`. Upload `assets/script.js`, `assets/favicon.svg`, `.nojekyll` (optional for this plain HTML setup), and the entire `articles/` folder.
+4. **Remove old files only if you are sure they are no longer needed.** The old `assets/script.js` or separate unused files can remain safely.
+5. Commit and revisit https://candramuhammad.github.io/ after deployment.
 
-## Customize before publishing
+## Writing articles / Menulis artikel
 
-1. In `index.html`, replace `Your Name`, `YOUR NAME`, `Your Institution`, `Your City, Country`, and the example bio.
-2. Update the example publications. **These are placeholders, not real papers.** Update the URLs or delete the entries entirely.
-3. Update links in the contact section, or remove ones you don't want to share.
-4. Link your teaching projects or notebooks when you are ready. Currently the teaching cards are descriptive placeholders.
-5. Change the page title and metadata in the HTML `<head>`.
-6. Optionally customize colors in `assets/style.css` at `:root`.
+- Articles index: `articles/index.html`
+- English template: `articles/en/sample.html`
+- Indonesian template: `articles/id/contoh.html`
+- Copy a template and rename it, e.g. `articles/id/mengenal-energi-gelap.html`.
+- Change its `<title>`, `<h1>`, description, and main body. Use `lang="id"` for Indonesian articles.
+- Add a link to the new file under the matching language in `articles/index.html`.
+- Both sample links are clearly labeled TEMPLATE and should be removed or replaced before public launch of the blog.
+- For many articles, consider moving to Jekyll later to write Markdown and generate index pages automatically.
 
-## Publish on GitHub Pages (no command line)
+## GIF / ASCII
 
-1. Sign in at https://github.com.
-2. Click **+** (top right) → **New repository**.
-3. Name the repository **YOUR-EXACT-USERNAME.github.io** (replace with your own GitHub username).
-4. Choose **Public** and create the repository.
-5. On the repository page, choose **Add file** → **Upload files**. Upload `index.html`, the `assets` folder and its contents, and optionally `README.md`. Ensure `index.html` is at the repository root and the stylesheet at `assets/style.css`.
-6. Click **Commit changes**.
-7. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/(root)**, then **Save**.
-8. Open **https://YOUR-EXACT-USERNAME.github.io/** after deployment. GitHub says publication can take up to about 10 minutes.
+Place your animation at `assets/phantom_crossing.gif`; replace the demo `<pre>...</pre>` in `index.html` with:
 
-If the repository has a different default branch, choose that branch instead of `main`. With GitHub Free the repository must be public to publish it with GitHub Pages.
+```html
+<img src="assets/phantom_crossing.gif" alt="ASCII animation of the phantom-divide crossing" width="640">
+```
 
-## Updating later
+Use the native export resolution to avoid blurring. Add a link to the Python source separately; GitHub Pages does not run Python on the server.
 
-Edit `index.html` directly on GitHub using the pencil button and commit your changes. GitHub Pages will republish the site automatically.
+## Navigation
 
-## Privacy
-
-Everything in this public repository and on the site is public. Do not upload private contact details, unpublished research data, passwords or API keys.
-
-Official guide: https://docs.github.com/en/pages/quickstart
+Teaching is omitted from the navigation and homepage for now. The site uses an Articles section instead. The website is static and can be edited directly on GitHub.
