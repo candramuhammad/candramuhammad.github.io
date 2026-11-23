@@ -121,25 +121,22 @@ h3 {
 }
 
 .research-entry {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
-  align-items: start;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
-.research-entry + .research-entry {
-  border-top: 1px dashed var(--line);
+
+.research-description {
+  width: 100%;
 }
-.research-description p {
-  margin: 0;
-}
+
 .research-visual {
-  margin: 0;
-  padding: 0.8rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
 }
+
 .ascii-title {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.82rem;
