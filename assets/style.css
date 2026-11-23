@@ -1,1 +1,56 @@
 :root{color-scheme:dark;--bg:#11151a;--panel:#171d24;--text:#d5d9dd;--soft:#a5adb6;--muted:#82909b;--line:#37414b;--link:#9bc7ed;--accent:#b8cfa9;--max:830px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 Georgia,'Times New Roman',serif}a{color:var(--link);text-underline-offset:3px}a:hover{color:#d6e9ff}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.page{width:min(calc(100% - 44px),var(--max));margin:45px auto 65px}.site-heading{padding-bottom:23px}.overline{font:12px/1.4 'Courier New',monospace;letter-spacing:.11em;color:var(--accent);margin:0 0 28px}.right{float:right;color:var(--muted)}h1{font-size:clamp(2.4rem,5.2vw,3.5rem);font-weight:400;letter-spacing:-.035em;line-height:1.08;margin:0 0 12px;color:#f1f0e9}.affiliation{color:var(--soft);font-size:1rem;line-height:1.55;margin:0}.site-nav{border-block:1px solid var(--line);padding:12px 0;display:flex;gap:10px 25px;flex-wrap:wrap;font:14px/1.5 'Courier New',monospace}.site-nav a{text-decoration:none}.site-nav a:hover{text-decoration:underline}main{padding-top:12px}section{padding:19px 0 22px;border-bottom:1px solid var(--line)}h2{font-weight:400;color:#e7e6df;font-size:1.55rem;margin:0 0 15px}p{margin:0 0 14px}p:last-child{margin-bottom:0}ul{padding-left:23px;margin:0}li{padding:0 0 9px}strong{color:#e0e6e5;font-weight:600}.muted,.small{color:var(--soft)}.small{font-size:.86rem}.translation{color:var(--muted);font-size:.78em}code,pre{font-family:'Courier New',Consolas,monospace}code{font-size:.87em;color:#bfd6c6}.ascii-figure{margin:18px 0 10px;border:1px solid var(--line);background:var(--panel);padding:17px 20px}.ascii-title{font:11px/1.4 'Courier New',monospace;letter-spacing:.1em;color:var(--accent);border-bottom:1px dashed var(--line);padding-bottom:10px}.ascii-figure pre{font-size:clamp(10px,2.1vw,14px);line-height:1.5;overflow:auto;color:#a5d5bb;margin:15px 0}.ascii-figure img{max-width:100%;height:auto;display:block;margin:14px auto;image-rendering:auto}.ascii-figure figcaption{font:12px/1.6 Georgia,serif;color:var(--soft)}footer{padding-top:22px;display:flex;gap:12px 22px;flex-wrap:wrap;justify-content:space-between;font:12px/1.5 'Courier New',monospace;color:var(--muted)}.skip{position:absolute;top:-100px;left:10px;background:var(--panel);padding:6px}.skip:focus{top:10px}.article-list{padding-left:22px}.article-list li{padding-bottom:18px}.article-meta{font:12px/1.5 'Courier New',monospace;color:var(--muted)}.article-body{max-width:720px}.article-body h2{margin-top:25px}.article-body blockquote{border-left:2px solid var(--line);padding-left:20px;margin-left:0;color:var(--soft)}@media(max-width:540px){body{font-size:16px}.page{width:min(calc(100% - 32px),var(--max));margin-top:26px}.right{display:none}.site-nav{gap:10px 16px;font-size:13px}footer{flex-direction:column}}
+
+
+/* Research topics, each with an optional ASCII animation */
+.research-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 24px;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px dashed var(--line);
+}
+.research-entry:first-of-type { margin-top: 18px; }
+.research-description h3 {
+  color: #e7e6df;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+.research-description p { margin: 0; }
+.research-visual {
+  min-width: 0;
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 12px;
+}
+.research-visual img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 12px auto;
+}
+.research-visual figcaption {
+  color: var(--soft);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.placeholder-text {
+  display: grid;
+  place-items: center;
+  min-height: 118px;
+  margin: 12px 0;
+  color: var(--muted);
+  font: .8rem/1.5 'Courier New', monospace;
+  text-align: center;
+  border: 1px dashed var(--line);
+}
+@media (max-width: 660px) {
+  .research-entry { grid-template-columns: 1fr; gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
